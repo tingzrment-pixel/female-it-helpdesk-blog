@@ -4,169 +4,163 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width", initial-scale="1.0">
 	<title>Women in IT Helpdesk | Portfolio</title>
-	<link rel="stylesheet" href="style.css">
-
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
 	
 <style>
-	body {
+:root {
+	--bg: #0f172a;
+	--text: #f1f5f9;
+	--accent: #8b5cf6;
+	--card: rgba(255, 255, 255, 0.08);
+	--border: rgba(255, 255, 255, 0.2);
+}
+body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-}
-
-/* NAVBAR */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
-    position: sticky;
-    top: 0;
-}
-
-nav h1 {
-    color: #38bdf8;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
 }
 
 /* HERO */
 .hero {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px;
 }
 
-.hero h2 {
-    font-size: 40px;
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero span {
+    color: var(--accent);
 }
 
 .hero p {
-    opacity: 0.8;
+	max-width: 500px;
+	margin: 15px 0;
 }
 
+/* BUTTON */
 .btn {
-    padding: 12px 25px;
-    background: #38bdf8;
-    border: none;
-    color: black;
-    border-radius: 10px;
-    cursor: pointer;
+	padding: 12px 20px;
+	border-radius: 25px;
+	border: none;
+	background: var(--accent);
+	color: white;
+	cursor: pointer;
+	margin-top: 10px;
 }
 
-/* GLASS CARD */
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    padding: 25px;
-    border-radius: 15px;
-    margin: 20px;
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* GRID */
+.container {
+	max-width: 1000px;
+	margin: auto;
+}
+
+/* CARDS */
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
 }
 
-/* SECTION */
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
+.card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	padding: 20px;
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    opacity: 0.6;
+    opacity: 0.7;
 }
+
+/* ANIMATION */
+.fade-in {
+	animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+	from {opacity: 0; transform: translateY(20px);}
+	to {opacity: 1; transform: translateY(0);}
+}
+
 </style>
+</head>
+
 <body>
-	<nav>
-		<h1>IT Helpdesk</h1>
-		<div>
-			<a href="#about">About</a>
-			<a href="#services">Services</a>
-			<a href="#blog">Blog</a>
-			<a href="#contact">Contact</a>
-		</div>
-	</nav>
 
-	<div class="hero">
-		<h2>Women in IT Helpdesk</h2>
-		<p>Empowering support, solving problems, building careers</p>
-		<button class="btn">Hire Me on Fiverr</button>
-	</div>
+<!-- HERO -->
+<section class="hero">
+	<h1>Empowering Women in <span>IT Helpdesk</span></h1>
+	<p>Learn, grow and succed in tech support - even if you're starting from zero.</p>
+	<button class="btn" onclick="scrollToSection()">Start Your Journey</button>
+</section>
 
-	<section id="about">
-		<div class="card">
-			<h2>About Me</h2>
-			<p>Hi! I am an aspiring IT Helpdesk Specialist passionate about solving technical issues, supporting users, and growing in the tech industry as a woman.</p>
-		</div>
-	</section>
-
-	<section id="services">
-		<h2 style="text-align: center;">My Services</h2>
-		<div class="grid">
-
-			<div class="card">
-				<h3>Remote IT Help</h3>
-				<p>Providing step-by-step solutions for clients.</p>
-			</div>
-
-			<div class="card">
-				<h3>Documentation</h3>
-				<p>Creating guides, SOPs, and knowledge base articles.</p>
-			</div>
-		</div>
-	</section>
-
-	<section id="blog">
-		<h2 style="text-align: center;">Blog</h2>
-
-		<div class="card">
-			<h4>Are you experiencing technical issues with your computer, software, or network? I am here to help!</h4>
-			<p>As an aspiring IT Helpdesk Specialist, I offer reliable and efficient support services.</p>
-			<ul>
-				<li>Troubleshooting Windows and software issues</li>
-				<li>Remote IT assistance</li>
-				<li>Basic network support</li>
-				<li>Technical documentation</li>
-			</ul>
-
-			<br>
-			<h3>Why choose Me?</h3>
-			<ul>
-				<li>Fast response</li>
-				<li>Clear communication</li>
-				<li>Dedicated support</li>
-			</ul>
-
-			<h3>Let's solve your tech tech problems today!</h3>
-		</div>
-	</section>
-
-<section id="contact">
-	<div class="card">
-		<h2>Contact Me</h2>
-		<p>Email: julieper13@yahoo.com</p>
-		<p>Fiverr: https://www.fiverr.com/sellers/julieper13</p>
+<!-- ABOUT -->
+<section class="section fade-in">
+	<div class="container">
+		<h2>About This Blog</h2>
+		<p>
+			This platform shares real experiences, tips, and guides for Women entering the IT Helpdesk field.
+			From beginner basics to advanced troubleshooting - you'll find everything here.
+		</p>
 	</div>
 </section>
 
+<!-- FEATURES -->
+<section class="section">
+	<div class="container grid">
+
+		<div class="card fade-in">
+			<h3>Beginner Guides</h3>
+			<p>Step-by-step tutorials to help you break into IT support.</p>
+		</div>
+
+		<div class="card fade-in">
+			<h3>Real Experience</h3>
+			<p>Learn from real-world IT Helpdesk scenarios and solutions.</p>
+		</div>
+
+		<div class="card fade-in">
+			<h3>Career Growth</h3>
+			<p>Tips on certifications, skills and advancing in tech.</p>
+		</div>
+	</div>
+</section>
+
+<!-- CALL TO ACTION-->
+<section class="section fade-in">
+	<div class="container">
+		<h2>Start Your IT Journey Today</h2>
+		<p>Build your confidence, gain skills, and land your first IT job.</p>
+		<button class="btn">Read the blog</button>
+	</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-	<p>@ 2026 Women in IT Helpdesk Portfolio</p>
+	<p>@ 2026 Women in IT Helpdesk</p>
 </footer>
+
+<script>
+	function scrollToSection() {
+		window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+	}
+</script>
 
 </body>
 </html>
